@@ -29,11 +29,14 @@ Knowledge requirement:
 
 ## Getting started
 In order to get started, once you have set up the pre-requisites, create a directory
-in your drive and clone this repository into it _(either via HTTP or SSH)_.
+in your drive and clone this repository into it _(either via HTTPS or SSH)_.
 
-> **Note:** if you are having issues with cloning using SSH, consider using HTTP.
+**HTTPS:** `https://github.com/MikoStellio/git_practice.git`  
+**SSH:** `git@github.com:MikoStellio/git_practice.git`
 
-Using HTTP might be easier for beginners, but you might want to consider learning
+> **Note:** if you are having issues with cloning using SSH, consider using HTTPS.
+
+Using HTTPS might be easier for beginners, but you might want to consider learning
 how to set up an SSH as it only requires a one time setup. Much more efficient and
 convenient to use especially in a quick moving project.
 
@@ -55,3 +58,9 @@ by other directories.
 6. Set appropriate tags for your code (i.e. `wip`).
 7. Never steal the codes for your own personal gain and usage. Use it to learn and
 experiment.
+8. Always create a branch and never commit and push from master!
+9. Branch names should be all lower case, no spaces, words are separated by hyphens.
+If it is associated to a ticket (i.e. JIRA) then the ticket nummber must be the
+prefix of the branch name.
+i.e. `TIX-001/feature-branch-name`
+10. Commits should be clean and easy to understand. Document all relevant changes.
