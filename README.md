@@ -60,7 +60,12 @@ by other directories.
 experiment.
 8. Always create a branch and never commit and push from master!
 9. Branch names should be all lower case, no spaces, words are separated by hyphens.
-If it is associated to a ticket (i.e. JIRA) then the ticket nummber must be the
+If it is associated to a ticket (i.e. JIRA) then the ticket number must be the
 prefix of the branch name.
 i.e. `TIX-001/feature-branch-name`
-10. Commits should be clean and easy to understand. Document all relevant changes.
+10. Commit messages should be clean and easy to understand. Document all relevant changes.
+11. Commit messages should start with:
+    - Add
+    - Update
+    - Fix
+    - Delete
