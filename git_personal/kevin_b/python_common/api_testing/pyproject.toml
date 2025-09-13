@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "api-testing"
+version = "0.1.0"
+description = "Package for automated API testing"
+dependencies = ["requests"]
+readme = "README.md"
+authors = [
+    {name = "Kevin James Bernabe", email = "kevinj.bernabe@gmail.com"}
+]
+
+[tool.setuptools]
+packages = ["api_testing"]
