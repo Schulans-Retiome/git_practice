@@ -46,25 +46,33 @@ To learn more about SSH setup, check this tutorial: https://gitscripts.com/setup
 Even if chaos is expected for this repository, there must be some rules imposed to 
 retain a good and proper workflow in order to practice a good process.
 
-The rules are as follows:
+The rules are as follows.
+
+### Directory rules:
 1. `git_personal` are where private codes are stored. Codes stored within a specific
-user's directory (i.e. `git_personal/username`) should only be modified by the
-user assigned to it.
+   user's directory (i.e. `git_personal/username`) should only be modified by the
+   user assigned to it.
 2. Codes within `git_personal` should be turned into a package that can be imported
 by other directories.
-3. All users can modify and delete all codes and add more codes inside `git_common`.
-4. Create a `README.md` for created directories and packages.
-5. Never delete root directories (i.e. `git_common`, `git_personal`).
-6. Set appropriate tags for your code (i.e. `wip`).
-7. Never steal the codes for your own personal gain and usage. Use it to learn and
+3. This repo should be treated as a `monorepo` structure, which means all subdirectories
+   (only) under git_personal should be treated as installable packages which the devs
+   can choose from on which packages to be installed. As such, each directory should
+   contain a `pyproject.toml` or similar file to install the package's dependencies.
+4. All users can modify and delete all codes and add more codes inside `git_common`.
+5. Create a `README.md` for created directories and packages.
+6. Never delete root directories (i.e. `git_common`, `git_personal`).
+7. Set appropriate tags for your code inside of a `README.md` (i.e. `wip`).
+8. Never steal the codes for your own personal gain and usage. Use it to learn and
 experiment.
-8. Always create a branch and never commit and push from master!
-9. Branch names should be all lower case, no spaces, words are separated by hyphens.
-If it is associated to a ticket (i.e. JIRA) then the ticket number must be the
-prefix of the branch name.
-i.e. `TIX-001/feature-branch-name`
-10. Commit messages should be clean and easy to understand. Document all relevant changes.
-11. Commit messages should start with:
+
+### Git rules:
+1. Always create a branch and never commit and push from master!
+2. Branch names should be all lower case, no spaces, words are separated by hyphens.
+   If it is associated to a ticket (i.e. JIRA) then the ticket number must be the
+   prefix of the branch name.
+   i.e. `TIX-001/feature-branch-name`
+3. Commit messages should be clean and easy to understand. Document all relevant changes. 
+4. Commit messages should start with:
     - Add
     - Update
     - Fix
