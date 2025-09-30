@@ -95,3 +95,37 @@ if we dissect this, we can arrive to each part:
 `value1` - the value inside the parameter that is being queried  
 `&` - query string operator to indicate AND  
 `parameter2=value2` - second query  
+
+---
+## Creating an API automation framework with PyTest
+
+The prerequisite files are:
+1. pytest.ini
+2. requirements.txt
+3. conftest.py
+4. utils/api_client.py
+
+### pytest.ini
+this contains the settings/configuration of the pytest
+
+### requirements.txt
+this contains the required libraries to install
+
+### conftest.py
+this contains the setup and teardown of the pytest (fixture)  
+this also contains the creation of reports using pytest.html (hookimpl)  
+
+## utils/api_client.py
+this contains the class to test the api
+
+## Issue with running with PyTest
+Encountered issue:  
+When I run pytest in terminal, I get ModuleNotFoundError for `git_common`  
+Even if Python itself can find it (no errors shown in code), PyTest can't
+seem to see it.  
+
+Solution:  
+Add `__init__.py` to the class module and the test folder and then run
+`python -m pytest` instead of just pytest.  
+Working theory as to why this is is because, running pytest might be
+calling the Python in your system and not the one in your venv

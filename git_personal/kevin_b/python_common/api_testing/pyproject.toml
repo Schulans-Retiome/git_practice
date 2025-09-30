@@ -6,7 +6,11 @@ build-backend = "setuptools.build_meta"
 name = "api-testing"
 version = "0.1.0"
 description = "Package for automated API testing"
-dependencies = ["requests"]
+dependencies = [
+    "requests",
+    "pytest",
+    "pytest-html"
+]
 readme = "README.md"
 authors = [
     {name = "Kevin James Bernabe", email = "kevinj.bernabe@gmail.com"}
